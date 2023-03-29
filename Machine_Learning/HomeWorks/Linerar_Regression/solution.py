@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from random import randint
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
 
 
 def dataFrame():
@@ -58,7 +59,7 @@ def two_b():
     return data_sets
 
 
-def two_c():
+def two():
     data_sets = two_b()
     for i, df in zip(['A', 'B', 'C'], data_sets):
         le = df["Life expectancy"]
@@ -87,20 +88,18 @@ def three(type):
 
 def four():
 
-    gdp, total_exp, alchol = three('model')
+    gdp, total_exp, alcohol = three('model')
 
     print(gdp.coef_, gdp.intercept_)
     print(total_exp.coef_, total_exp.intercept_)
-    print(alchol.coef_, alchol.intercept_)
+    print(alcohol.coef_, alcohol.intercept_)
 
     x, y = three('data')
 
     plt.style.use('default')
     plt.style.use('ggplot')
 
-    x_data_pred = np.linspace(0, x[['GDP']])
-
-    x_data_pred = x_data_pred.reshape(-1, 1)
+    x_data_pred = np.linspace(0, x[['GDP']].max(), num=100).reshape(-1, 1)
     y_data_pred = gdp.predict(x_data_pred)
 
     plt.style.use('ggplot')
@@ -120,13 +119,27 @@ def four():
 
 
 def five():
-    pass
+    models = three('model')
+    a_test, b_test = three('data')
+
+    gdp_pred = models[0].predict(a_test[['GDP']])
+    total_exp_pred = models[1].predict(a_test[['Total expenditure']])
+    alcohol_pred = models[2].predict(a_test[['Alcohol']])
+
+    gdp_error = mean_absolute_error(b_test[['GDP']], gdp_pred)
+    total_exp_error = mean_absolute_error(
+        b_test[['Total expenditure']], total_exp_pred)
+    alcohol_error = mean_absolute_error(b_test[['Alcohol']], alcohol_pred)
+
+    average_error = np.mean([gdp_error, total_exp_error, alcohol_error])
+    standard_deviation = np.std([gdp_error, total_exp_error, alcohol_error])
+    print(
+        f'The Standard Deviation = {standard_deviation}\nThe Avarage Error = {average_error}')
 
 
 def main():
-    # two_c()
-    # three()
-    # three()
+    two()
+    five()
     four()
 
 
