@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
 import statistics
+import matplotlib.pyplot as plt
 from random import randint
 from sklearn import linear_model
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_absolute_error
 
 
 def dataFrame():
@@ -57,7 +59,7 @@ def two_b():
     return data_sets
 
 
-def two_c():
+def two():
     data_sets = two_b()
     for i, df in zip(['A', 'B', 'C'], data_sets):
         le = df["Life expectancy"]
@@ -68,7 +70,7 @@ def two_c():
             f"Maximum Life Expectancy country in {i} are {max_three}")
 
 
-def three():
+def three(type):
     a, b, _ = split_test_data("train")
     regression_gdp = linear_model.LinearRegression(fit_intercept=True)
     regression_total_exp = linear_model.LinearRegression(fit_intercept=True)
@@ -78,22 +80,66 @@ def three():
     total_exp = regression_total_exp.fit(a[[totexpen]], b[[totexpen]])
     alcohol = regression_alcohol.fit(a[['Alcohol']], b[['Alcohol']])
 
-    return gdp, total_exp, alcohol
+    if type == 'model':
+        return gdp, total_exp, alcohol
+    elif type == 'data':
+        return a, b
 
 
 def four():
 
-    gdp, total_exp, alchol = three()
+    gdp, total_exp, alcohol = three('model')
 
     print(gdp.coef_, gdp.intercept_)
     print(total_exp.coef_, total_exp.intercept_)
-    print(alchol.coef_, alchol.intercept_)
+    print(alcohol.coef_, alcohol.intercept_)
+
+    x, y = three('data')
+
+    plt.style.use('default')
+    plt.style.use('ggplot')
+
+    x_data_pred = np.linspace(0, x[['GDP']].max(), num=100).reshape(-1, 1)
+    y_data_pred = gdp.predict(x_data_pred)
+
+    plt.style.use('ggplot')
+
+    figure, ax = plt.subplots(figsize=(7, 3.5))
+    ax.plot(x_data_pred, y_data_pred, color='r',
+            label='Regression line', linewidth=4, alpha=0.5)
+    ax.scatter(x[['GDP']], y[['GDP']], edgecolor='k',
+               facecolor='Turquoise', alpha=0.7, label='data')
+    ax.set_ylabel('GDP/y', fontsize=16)
+    ax.set_xlabel('GDP/x', fontsize=16)
+    ax.legend(facecolor='white', fontsize=11)
+    ax.text(
+        0.55, 0.15, f'$GDP/y = {round(gdp.coef_[0][0],4)} - GDP/x {round(abs(gdp.intercept_[0]),2)} $', fontsize=17, transform=ax.transAxes)
+    figure.tight_layout()
+    plt.show()
+
+
+def five():
+    models = three('model')
+    a_test, b_test = three('data')
+
+    gdp_pred = models[0].predict(a_test[['GDP']])
+    total_exp_pred = models[1].predict(a_test[['Total expenditure']])
+    alcohol_pred = models[2].predict(a_test[['Alcohol']])
+
+    gdp_error = mean_absolute_error(b_test[['GDP']], gdp_pred)
+    total_exp_error = mean_absolute_error(
+        b_test[['Total expenditure']], total_exp_pred)
+    alcohol_error = mean_absolute_error(b_test[['Alcohol']], alcohol_pred)
+
+    average_error = np.mean([gdp_error, total_exp_error, alcohol_error])
+    standard_deviation = np.std([gdp_error, total_exp_error, alcohol_error])
+    print(
+        f'The Standard Deviation = {standard_deviation}\nThe Avarage Error = {average_error}')
 
 
 def main():
-    # two_c()
-    # three()
-    # three()
+    two()
+    five()
     four()
 
 
