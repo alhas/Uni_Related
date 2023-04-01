@@ -1,0 +1,15 @@
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\bin\Debug\net7.0\third.netHomework.exe
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\bin\Debug\net7.0\third.netHomework.deps.json
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\bin\Debug\net7.0\third.netHomework.runtimeconfig.json
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\bin\Debug\net7.0\third.netHomework.dll
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\bin\Debug\net7.0\third.netHomework.pdb
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.csproj.AssemblyReference.cache
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.AssemblyInfoInputs.cache
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.AssemblyInfo.cs
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.csproj.CoreCompileInputs.cache
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.dll
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\refint\third.netHomework.dll
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.pdb
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\third.netHomework.genruntimeconfig.cache
+C:\Users\alhas\Documents\GitHub\Uni_Related\Ms.net\third.netHomework\obj\Debug\net7.0\ref\third.netHomework.dll
