@@ -53,7 +53,7 @@ class Main:
     of the model with the actual target values of the training data. """
 
     # 9 - 10 - 11
-    def mean_stdev():
+    def mean_stdev(self):
         test_iris = NewIris()
         _x = test_iris.data.data
         _y = test_iris.data.target
