@@ -13,38 +13,59 @@ class NewIris:
     def __init__(self):
         self.data = load_iris()
 
-    def __str__(self) -> str:
-        return f"{self.data}"
+    def create_data_target(self):
+        self.x = self.data.data
+        self.y = self.data.target
+
+        return self.x, self.y
+
+    def train_test(self):
+        self.x, self.y = self.create_data_target()
+        self.x_train_ds, self.x_test_ds,\
+            self.y_train_ds, self.y_test_ds = train_test_split(
+                self.x, self.y, random_state=1)
+
+        return self.x_train_ds, self.x_test_ds, self.y_train_ds, self.y_test_ds
+
+    def create_tree(self):
+        self.x_train_ds, _, self.y_train_ds, _ = self.train_test()
+        self.clf = tree.DecisionTreeClassifier(
+            criterion='entropy', min_samples_leaf=2)
+        self.clf = self.clf.fit(self.x_train_ds, self.y_train_ds)
+        return self.clf
+
+    def prediction(self):
+        self.x_train_ds, self.x_test_ds, _, _ = self.train_test()
+        self.predicted_x_trained_data = self.create_tree().predict(self.x_train_ds)
+        self.predicted_x_tested_data = self.create_tree().predict(self.x_test_ds)
+
+        return self.predicted_x_trained_data, self.predicted_x_tested_data
+
+    def accuracy_score(self):
+        _, _, self.y_train_ds, self.y_test_ds = self.train_test()
+
+        self.predicted_x_trained_data, self.predicted_x_tested_data = self.prediction()
+
+        self.trained_accuracy_score = metrics.accuracy_score(
+            self.predicted_x_trained_data, self.y_train_ds, normalize=True)
+        self.tested_accuracy_score = metrics.accuracy_score(
+            self.predicted_x_tested_data, self.y_test_ds, normalize=True)
+        print(self.trained_accuracy_score, "\n", self.tested_accuracy_score)
 
 
 class Main:
     # 2
     iris = NewIris()
-    x = iris.data.data
-    y = iris.data.target
-
+    iris.create_data_target()
     # 3
-    x_train_ds, x_test_ds, \
-        y_train_ds, y_test_ds = train_test_split(x, y, random_state=1)
-
+    iris.train_test()
     # 4
-    clf = tree.DecisionTreeClassifier(criterion='entropy', min_samples_leaf=2)
-    clf = clf.fit(x_train_ds, y_train_ds)
-
-    # 5
-    predicted_x_trained_data = clf.predict(x_train_ds)
-    
-    # 6
-    predicted_x_tested_data = clf.predict(x_test_ds)
-
+    iris.create_tree()
+    # 5 - 6
+    iris.prediction()
     # 7
-    trained_accuracy_score = metrics.accuracy_score(
-        predicted_x_trained_data, y_train_ds, normalize=True)
-    tested_accuracy_score = metrics.accuracy_score(
-        predicted_x_tested_data, y_test_ds, normalize=True)
+    iris.accuracy_score()
 
-    print(trained_accuracy_score)
-    print(tested_accuracy_score)
     # 8
     """ The result obtained for the train data in this code is
     the accuracy score of the model on the data used for training.
@@ -93,5 +114,5 @@ class Main:
     mean_stdev()
 
     # 12
-    tree.plot_tree(clf, filled=True)
+    tree.plot_tree(iris.create_tree(), filled=True)
     plt.show()
