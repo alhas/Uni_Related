@@ -1,0 +1,15 @@
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.csproj.AssemblyReference.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.AssemblyInfoInputs.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.AssemblyInfo.cs
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.csproj.CoreCompileInputs.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\bin\Debug\net7.0\fourth.netHomework.exe
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\bin\Debug\net7.0\fourth.netHomework.deps.json
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\bin\Debug\net7.0\fourth.netHomework.runtimeconfig.json
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\bin\Debug\net7.0\fourth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\bin\Debug\net7.0\fourth.netHomework.pdb
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\refint\fourth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.pdb
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\fourth.netHomework.genruntimeconfig.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\fourth.netHomework\obj\Debug\net7.0\ref\fourth.netHomework.dll
