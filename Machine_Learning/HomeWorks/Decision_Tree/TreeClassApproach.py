@@ -74,6 +74,7 @@ class Main:
     of the model with the actual target values of the training data. """
 
     # 9 - 10 - 11
+    @staticmethod
     def mean_stdev():
         test_iris = NewIris()
         _x = test_iris.data.data
@@ -103,7 +104,7 @@ class Main:
 
         print(f"Ten different value of random_state: {data_for_calculation}")
         print(f"Mean = {statistics.mean(data_for_calculation)}")
-        print(f"Standart Deviation = {statistics.stdev(data_for_calculation)}")
+        print(f"Standard Deviation = {statistics.stdev(data_for_calculation)}")
 
         plt.errorbar(data_for_calculation, accuracy_scores,
                      yerr=sem_scores, fmt='o-', capsize=5)
