@@ -1,0 +1,15 @@
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\bin\Debug\net7.0\sixth.netHomework.exe
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\bin\Debug\net7.0\sixth.netHomework.deps.json
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\bin\Debug\net7.0\sixth.netHomework.runtimeconfig.json
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\bin\Debug\net7.0\sixth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\bin\Debug\net7.0\sixth.netHomework.pdb
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.csproj.AssemblyReference.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.AssemblyInfoInputs.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.AssemblyInfo.cs
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.csproj.CoreCompileInputs.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\refint\sixth.netHomework.dll
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.pdb
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\sixth.netHomework.genruntimeconfig.cache
+C:\Users\Alhas\Documents\gitHub\Uni_Related\Ms.net\sixth.netHomework\sixth.netHomework\sixth.netHomework\obj\Debug\net7.0\ref\sixth.netHomework.dll
